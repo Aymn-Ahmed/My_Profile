@@ -1,0 +1,76 @@
+/* ملف CSS معدل */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(-45deg, #000000, #00ffff, #000000, #ffa500);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  position: relative;
+}
+
+/* المؤثرات الأساسية */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* التكيف مع الحركة */
+@media (prefers-reduced-motion: no-preference) {
+  .logo.spin {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* العناصر الأخرى */
+.card {
+  padding: 2em;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  margin: 1em 0;
+}
+
+.read-the-docs {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* الكيframes */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes cloud {
+  0% { transform: translate(-40px, -30px) scale(1); }
+  50% { transform: translate(30px, 40px) scale(1.15); }
+  100% { transform: translate(-40px, -30px) scale(1); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(40px) rotate(180deg); }
+  100% { transform: translateY(0px) rotate(360deg); }
+}
